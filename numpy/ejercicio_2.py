@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 
 #100 numeros aleatorios, media de 50 , desviacion estandar de 15  y tamaño 1000
 arr_random = np.random.normal(loc=50, scale=15 , size=1000)
-#print(arr_random)
+print(arr_random)
 
 #calculate the average
 arr_average = np.average(arr_random)
@@ -33,15 +33,18 @@ print(f'The 75th percentile value is : {arr_pd3}')
 
 #Create a histrogram 
 arr_htogram = np.histogram(arr_random)
+# devuelve dos cosas 
+# array con frecuencia de cada intervalo 
+# array con los limites de cada intervalo 
 
-#
+# Funcion para tomar el calculo y poder graficar
 plt.hist(arr_random)
-#
-plt.xlabel('Valor X')
-plt.ylabel('Valor Y')
-#
+#Titulos a los ejes
+plt.xlabel('Valor X') # representa los invervalos
+plt.ylabel('Valor Y') # representa la cantidad que se repetin 
+# Titulo al histograma 
 plt.title('Histogram the data random')
-#
+#Mostrar el histograma 
 plt.show()
 
 
